@@ -1,0 +1,10 @@
+* {
+  font-family: calibri;
+  margin: 0;
+  text-align: center;
+}
+canvas {
+  width: 800;
+  height: 800;
+  background-color: rgb(255, 251, 212);
+}

@@ -38,4 +38,4 @@ const comment = comments.find((comment) => comment.id === 823423);
 
 const index = comments.findIndex((comment) => comment.id === 823423);
 
-console.log(index);
+c;
