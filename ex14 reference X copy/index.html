@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Console</title>
+  </head>
+  <body>
+    <h1>console</h1>
+
+    <script>
+      //   let age = 100;
+      //   let age2 = age;
+      //   console.log(age, age2);
+      //   age = 200;
+      //   console.log(age, age2);
+
+      //   let name = "Cristovon Colombo";
+      //   let name2 = name;
+      //   console.log(name, name2);
+
+      //   name = "Vasco Da Gama";
+      //   console.log(name, name2);
+
+      // ARRAY
+      const jogadores = ["wes", "sarah", "ryan", "poppy"];
+      //   Copia do ARRAY (REFERENCIA)
+      const time = jogadores;
+      //   console.log(jogadores, time);
+      // alterar ARRAY COPIA (REFERENCIA)
+      //   time[3] = "lux";
+      //   console.log(jogadores, time);
+      //   FAZER UMA COPIA MESMO
+      const time2 = jogadores.slice();
+      time2[3] = "lux";
+      //   console.log(jogadores, time2);
+
+      // SPREAD
+      const time3 = [...jogadores];
+      console.log(time3);
+      time3[3] = "lux";
+      //   console.log(time3, jogadores);
+
+      // Array from
+      const time4 = Array.from(jogadores);
+      time4[3] = "lux";
+      //   console.log(time4, jogadores);
+
+      // OBJETOS
+      const pessoa = {
+        name: "Vasco Da Gama",
+        age: 43,
+      };
+
+      //   REFERENCIA DO OBJETO
+      //   const humano = pessoa;
+      //   humano.number = 32;
+      //   console.log(humano, pessoa);
+
+      // COPIA DO OBJETO
+      const humano2 = Object.assign({}, pessoa, { number: 99, age: 20 });
+      //   console.log(pessoa, humano2);
+
+      //   SPREAD NO OBJETO
+      const humano3 = { ...pessoa };
+      humano3.age = 50;
+      //   console.log(humano3, pessoa);
+
+      const influencer1 = {
+        name: "legal da silva",
+        age: 23,
+        social: {
+          twitter: "@legal",
+          facebook: "#muitolegal",
+        },
+      };
+      const influencer2 = { ...influencer1 };
+      influencer2.name = "doidao";
+      influencer2.social.twitter = "@ALTERADO";
+      console.log(influencer1, influencer2);
+      //   SO ALTERA O PRIMEIRO LEVEL, O SEGUNDO ELE REFERENCIA
+    </script>
+  </body>
+</html>
